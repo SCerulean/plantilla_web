@@ -1,0 +1,105 @@
+/* contenedor principal del card */
+.cardContainer {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-top: 2rem;
+  min-height: 30rem;
+  overflow: hidden;
+  background-color: #ffffff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  
+
+}
+
+/* efecto hover 
+.cardBase:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+}
+*/
+/* contenedor de imagen a la izquierda */
+.fondo {
+  position: relative;  /* obligatorio con fill */
+  width: auto;        /* ancho del bloque */
+  height: auto;        /* altura completa del card */
+  flex: 0 0 50%;       /* si es dentro de flex */
+}
+
+
+/* contenedor de info a la derecha */
+.info {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  font-size: 1.2rem;
+  
+}
+
+/* titulo */
+.title {
+    height: 10%;
+    align-items: end;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-textBlack);
+  border-bottom: #0F224D solid .2rem;
+}
+
+
+
+/* descripción */
+.descripcion {
+    margin-top: 1.5rem;
+    height: 50%;
+  color: var(--color-textBlack);
+  line-height: 1.2;
+    font-weight: 500;
+  min-height: 6rem;
+  border-bottom: #0F224D solid .5px;
+}
+
+/* link de detalles */
+.info a {
+        height: 15%;
+  color: var(--color-primary);
+  font-weight: 500;
+  text-decoration: underline;
+
+}
+
+/* descuento y precio */
+.descuento {
+  color: #d9534f;
+}
+
+.precio {
+    height: 15%;
+  font-weight: 600;
+  color: #0F224D;
+}
+
+
+.btn2 {
+height: 10%;
+  border: none;
+  border-radius: 8px;
+
+  font-weight: bold;
+  cursor: pointer;
+  background: var(--color-accent)
+}
+
+
+/* responsive para mobile */
+@media (max-width: 768px) {
+  .cardBase {
+    flex-direction: column;
+  }
+  .fondo {
+    width: 100%;
+    height: 8rem;
+  }
+}

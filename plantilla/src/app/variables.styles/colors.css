@@ -1,0 +1,31 @@
+:root {
+  --background: #ffffff;
+  --foreground: #323232;
+  
+  /* Colores principales */
+  --color-bg: #F5F5F5;           /* Fondo neutro */
+  --color-text: #2E2E2E;         /* Texto principal */
+  --color-primary: #1E4F66;      /* Azul Pacífico */
+  --color-white: #FFFFFF;         /* Blanco puro */
+
+  /* Colores secundarios */
+  --color-secondary: #F76C5E;    /* Coral Valparaíso */
+  --color-accent: #FFD166;       /* Amarillo faro */
+  --color-border: #D9D9D9;       /* Gris claro */
+  --color-hover: #2AB7CA;        /* Turquesa brillante */
+  --color-highlight: #7AA95C;    /* Verde oliva suave */
+  --color-textBlack: #000000;    
+  --color-textWhite: #FFFFFF;    /* Verde oliva suave */
+}
+
+
+
+  /* DARK MODE
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+  */

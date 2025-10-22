@@ -1,0 +1,42 @@
+.btn1 {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-weight: bold;
+  cursor: pointer;
+  background: var(--color-primary)
+}
+
+
+.btn2 {
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-weight: bold;
+  cursor: pointer;
+  background: var(--color-accent)
+}
+
+
+.primary {
+  background: #007bff;
+  color: white;
+}
+
+.secondary {
+  background: #6c757d;
+  color: white;
+}
+
+.danger {
+  background: #dc3545;
+  color: white;
+}
+
+.icon {
+  margin-right: 8px;
+}
+
+.loading {
+  opacity: 0.7;
+}

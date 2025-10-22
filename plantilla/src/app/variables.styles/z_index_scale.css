@@ -1,0 +1,27 @@
+:root {
+  /* ===== Z-INDEX SCALE ===== */
+
+  /*  Base elements (default layout) */
+  --z-base: 0;              /* contenido normal */
+  --z-content: 1;           /* secciones principales, imágenes, texto */
+
+  /*  Navegación y UI fija */
+  --z-header: 100;          /* navbar o header sticky */
+  --z-footer: 90;           /* footer fijo, si existe */
+  --z-sidebar: 200;         /* menú lateral o panel fijo */
+
+  /*  Interacción / overlays */
+  --z-dropdown: 300;        /* menús desplegables */
+  --z-tooltip: 400;         /* tooltips */
+  --z-toast: 450;           /* notificaciones tipo toast */
+
+  /*  Superposiciones */
+  --z-overlay: 500;         /* fondo oscuro detrás de un modal */
+  --z-modal: 600;           /* cuadros de diálogo o pop-ups */
+  --z-loader: 700;          /* pantallas de carga o spinner global */
+  --z-navbar-floating: 800; /* navbar flotante (opcional) */
+
+  /*  Elementos críticos */
+  --z-alert: 900;           /* alertas prioritarias o banners */
+  --z-debug: 9999;          /* depuración (solo temporal) */
+}

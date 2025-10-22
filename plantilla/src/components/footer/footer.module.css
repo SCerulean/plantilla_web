@@ -1,0 +1,60 @@
+.footer {
+  background: linear-gradient(135deg, #0F224D, #2C3E50);
+  color: white;
+  padding: 3rem 1rem 1rem;
+  font-family: var(--font-geist-sans, sans-serif);
+}
+
+.footerContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logoSection {
+  flex: 1 1 250px;
+}
+
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.socialSection {
+  flex: 1 1 200px;
+  text-align: center;
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.socialIcons a {
+  color: white;
+  font-size: 1.8rem;
+  transition: color 0.3s ease;
+}
+
+.socialIcons a:hover {
+  color: #F2C94C; /* dorado */
+}
+
+.contactSection {
+  flex: 1 1 250px;
+}
+
+.copyRight {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
