@@ -1,11 +1,10 @@
 import type { Metadata } from "next";
-import { Raleway, Geist, Geist_Mono } from "next/font/google";
+import { Raleway, Geist_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+import { FooterComponent } from "@/components/footer/footer";
+import Navbar from "@/components/navbar/navbar";
+
 
 const raleway = Raleway({
   subsets: ["latin"],
@@ -31,7 +30,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${raleway.variable} ${geistMono.variable}`}>
+            <Navbar/> 
+            <div className="main">
         {children}
+         </div>
+        <FooterComponent></FooterComponent>
       </body>
     </html>
   );

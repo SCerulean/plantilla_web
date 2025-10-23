@@ -20,12 +20,12 @@ const Card = ({icon,alt,title, description ,classStyle}: CardDataProps) => {
 return (
         <div className={styles["cardContainer"]}>
 
-            <div className={styles["fondo"]} >
+            <div className={styles["imgContainer"]} >
               <Image
                 src={icon}
                 alt={alt}
                 fill           // ocupa todo el contenedor
-                style={{ objectFit: "cover" }} // recorta manteniendo proporción
+                className={styles["cardImg"]}
                 />
             </div>
 

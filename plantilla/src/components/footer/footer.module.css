@@ -1,10 +1,14 @@
+/* Footer principal */
 .footer {
   background: linear-gradient(135deg, #0F224D, #2C3E50);
   color: white;
   padding: 3rem 1rem 1rem;
   font-family: var(--font-geist-sans, sans-serif);
+  width: 100vw;
+  min-height: 20vh;
 }
 
+/* Contenedor interno */
 .footerContainer {
   display: flex;
   flex-wrap: wrap;
@@ -14,6 +18,7 @@
   margin: 0 auto;
 }
 
+/* Sección logo */
 .logoSection {
   flex: 1 1 250px;
 }
@@ -24,6 +29,7 @@
   margin-bottom: 0.5rem;
 }
 
+/* Sección redes sociales */
 .socialSection {
   flex: 1 1 200px;
   text-align: center;
@@ -46,10 +52,12 @@
   color: #F2C94C; /* dorado */
 }
 
+/* Sección contacto */
 .contactSection {
   flex: 1 1 250px;
 }
 
+/* Derechos de autor */
 .copyRight {
   text-align: center;
   margin-top: 2rem;
@@ -57,4 +65,43 @@
   border-top: 1px solid rgba(255,255,255,0.2);
   font-size: 0.9rem;
   opacity: 0.8;
+}
+
+/* Responsive tablet */
+@media (max-width: 1024px) {
+  .footerContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .logoSection,
+  .socialSection,
+  .contactSection {
+    text-align: center;
+    flex: 1 1 100%;
+  }
+
+  .socialIcons {
+    justify-content: center;
+  }
+}
+
+/* Responsive móvil */
+@media (max-width: 768px) {
+  .footer {
+    padding: 2rem 1rem 1rem;
+  }
+
+  .logo {
+    font-size: 1.5rem;
+  }
+
+  .socialIcons a {
+    font-size: 1.5rem;
+  }
+
+  .copyRight {
+    font-size: 0.8rem;
+  }
 }
