@@ -1,0 +1,173 @@
+/* =======================
+CARD HOTEL - MODERNO / REVISTA
+======================= */
+
+.cardContainer {
+display: grid;
+grid-template-columns: 1fr 1fr;
+width: 100%;
+max-width: 1100px;
+margin: 3rem auto;
+border-radius: 20px;
+overflow: hidden;
+background: #fdfdfd;
+box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+transition: all 0.4s ease;
+}
+
+.cardContainer:hover {
+transform: translateY(-8px);
+box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+}
+
+/* =======================
+IMAGEN CON EFECTO
+======================= */
+.imgContainer {
+position: relative;
+overflow: hidden;
+}
+
+.cardImg {
+width: 100%;
+height: 100%;
+object-fit: cover;
+transition: transform 0.8s ease;
+}
+
+.cardContainer:hover .cardImg {
+transform: scale(1.1);
+}
+
+.imgContainer::after {
+content: "";
+position: absolute;
+inset: 0;
+background: linear-gradient(180deg, transparent 60%, rgba(0,0,0,0.25) 100%);
+z-index: 1;
+}
+
+/* =======================
+INFORMACIÓN
+======================= */
+.info {
+padding: 3rem 2.5rem;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+background: #ffffff;
+}
+
+/* TÍTULO */
+.title {
+font-size: 2.2rem;
+font-weight: 800;
+color: #0f224d;
+letter-spacing: -0.5px;
+margin-bottom: 1rem;
+}
+
+/* DESCRIPCIÓN */
+.descripcion {
+font-size: 1.05rem;
+font-weight: 400;
+line-height: 1.7;
+color: #333;
+margin-bottom: 1.5rem;
+}
+
+/* ETIQUETA DE DESCUENTO */
+.descuento {
+background: #e63946;
+color: #fff;
+font-size: 0.9rem;
+font-weight: 600;
+padding: 0.4rem 0.8rem;
+border-radius: 5px;
+display: inline-block;
+margin-bottom: 0.8rem;
+}
+
+/* PRECIO */
+.precio {
+font-size: 1.5rem;
+font-weight: 700;
+color: #0077b6;
+margin-bottom: 1.2rem;
+}
+
+/* ENLACE */
+.info a {
+font-weight: 600;
+color: #0077b6;
+text-decoration: none;
+display: inline-flex;
+align-items: center;
+gap: 0.4rem;
+transition: gap 0.3s ease, color 0.3s ease;
+}
+
+.info a:hover {
+color: #023e8a;
+gap: 0.8rem;
+}
+
+/* BOTÓN */
+.btn2 {
+padding: 1rem 1.6rem;
+border: none;
+border-radius: 10px;
+font-weight: 700;
+cursor: pointer;
+background: #0077b6;
+color: #fff;
+align-self: flex-start;
+box-shadow: 0 4px 12px rgba(0, 119, 182, 0.3);
+transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn2:hover {
+background: #023e8a;
+transform: translateY(-3px);
+box-shadow: 0 6px 20px rgba(0, 119, 182, 0.4);
+}
+
+/* =======================
+RESPONSIVE
+======================= */
+@media (max-width: 900px) {
+.cardContainer {
+grid-template-columns: 1fr;
+}
+
+.imgContainer {
+height: 240px;
+}
+
+.info {
+padding: 2rem;
+}
+
+.title {
+font-size: 1.8rem;
+}
+}
+
+@media (max-width: 500px) {
+.info {
+padding: 1.5rem;
+}
+
+.title {
+font-size: 1.6rem;
+}
+
+.descripcion {
+font-size: 0.95rem;
+}
+
+.btn2 {
+width: 100%;
+text-align: center;
+}
+}

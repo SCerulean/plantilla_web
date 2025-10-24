@@ -1,8 +1,8 @@
 import React from "react";
-import styles from "./Button.module.css"; // si usas CSS Modules
-
+import button1 from "./Button.module.css"; // si usas CSS Modules
+import button2 from "./btn2.module.css"; // si usas CSS Modules
 interface ButtonProps {
-  styleName: string;
+  variant: "button1" | "button2"
   type?: "submit" | "reset" | "button";
   children: React.ReactNode;
   disabled?: boolean;
@@ -11,8 +11,14 @@ interface ButtonProps {
   icon?: React.ReactNode;
 }
 
+const style = {
+  button1,
+  button2
+}
+
+
 export const ButtonComponent = ({
-  styleName,
+  variant,
   type = "button",
   children,
   disabled,
@@ -21,14 +27,14 @@ export const ButtonComponent = ({
   icon,
 }: ButtonProps) => {
     
-    const classStyle = styles[styleName]
+    const styles = style[variant]
 
   return (
     <button
       type={type}
       onClick={onClick}
       disabled={disabled || loading}
-      className={classStyle}
+      className={styles.btn}
     >
       {loading ? (
         <span className={styles.loading}>Cargando...</span>

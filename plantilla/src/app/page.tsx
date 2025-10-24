@@ -1,4 +1,3 @@
-
 import styles from "./home.module.css";
 import dataCard from "./data.json"
 import Card from "@/components/card/card";
@@ -34,25 +33,23 @@ export default function Home() {
       <h1>
         Habitaciones Populares
       </h1>
+      
     {
       dataCard.map((data) => 
-        <Card key={data.id} id={data.id} icon={data.icon} alt={data.alt} title={data.title} description = {data.description} classStyle={data.classStyle} />
+        <Card key={data.id} id={data.id} icon={data.icon} alt={data.alt} title={data.title} description = {data.description} variant="card1" />
 
       )  
     }
-
     </section>
 
     <section className={styles["ubicacion"]}>
       <h1>
-        Donde Estamos
+        Nuestra Ubicacion 
       </h1>
-      <MapaUbicacion  classStyle="ubicacionFrame" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53462.650344800146!2d-71.71532110756415!3d-33.1244433209178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689e2041ccac981%3A0xe4a0449c37f0da25!2sLaguna%20Verde%2C%20Valpara%C3%ADso!5e0!3m2!1ses-419!2scl!4v1761249765980!5m2!1ses-419!2scl"></MapaUbicacion>
+      <MapaUbicacion   variant="mapa1" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d53462.650344800146!2d-71.71532110756415!3d-33.1244433209178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9689e2041ccac981%3A0xe4a0449c37f0da25!2sLaguna%20Verde%2C%20Valpara%C3%ADso!5e0!3m2!1ses-419!2scl!4v1761249765980!5m2!1ses-419!2scl"></MapaUbicacion>
   
     </section>
-
     <FloatButton/>
-
 </>
   );
 }

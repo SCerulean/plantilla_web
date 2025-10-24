@@ -1,6 +1,7 @@
 "use client";
-import styles from "./card.module.css"
-import { ButtonComponent } from "../button/button";
+import card1 from "./card.module.css"
+import card2 from "./card2.module.css"
+import card3 from "./card3.module.css"
 import Image from "next/image";
 export interface CardDataProps {
 
@@ -9,13 +10,20 @@ export interface CardDataProps {
     alt : string
     title : string | null,
     description : string | null
-    classStyle : string
+    variant : "card1" | "card2" | "card3"
    
 } 
 
+const style =  { 
+card1,
+card2,
+card3
+}
 
-const Card = ({icon,alt,title, description ,classStyle}: CardDataProps) => {
 
+const Card = ({icon,alt,title, description ,variant}: CardDataProps) => {
+
+    const styles = style[variant]
 
 return (
         <div className={styles["cardContainer"]}>
