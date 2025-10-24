@@ -4,7 +4,7 @@ import dataCard from "./data.json"
 import Card from "@/components/card/card";
 import Image from "next/image";
 import { MapaUbicacion } from "@/components/ubicacion/ubicacion";
-
+import FloatButton from "@/components/float-button/float-button";
 
 export default function Home() {
 
@@ -41,10 +41,7 @@ export default function Home() {
       )  
     }
 
-
-
     </section>
-
 
     <section className={styles["ubicacion"]}>
       <h1>
@@ -54,6 +51,7 @@ export default function Home() {
   
     </section>
 
+    <FloatButton/>
 
 </>
   );
